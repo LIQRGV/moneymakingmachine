@@ -33,8 +33,8 @@ class MovingAverageStrategy(Strategy):
     def rebalance(self, context, data):
         hist = data.history(self.stock, ['Close'], 100)
 
-        sma_50 = talib.SMA(hist['Close'], 30)[-1]
-        sma_15 = talib.SMA(hist['Close'], 20)[-1]
+        sma_50 = talib.SMA(hist['Close'], 25)[-1]
+        sma_15 = talib.SMA(hist['Close'], 5)[-1]
 
         # print(sma_50)
         # print(sma_15)
